@@ -1,5 +1,6 @@
 const express = require('express');
 const { findUserByName } = require('./db');
+const { exportUser } = require('./export');
 
 const app = express();
 
@@ -10,5 +11,7 @@ app.get('/users/:name', async (req, res) => {
   if (!user) return res.status(404).json({ error: 'not found' });
   res.json(user);
 });
+
+app.get('/export', exportUser);
 
 app.listen(process.env.PORT || 3000);
