@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Scratch repo for exercising the Cloudflare AI review committee",
   "main": "src/server.js",
-  "scripts": { "start": "node src/server.js" },
+  "scripts": {
+    "start": "node src/server.js"
+  },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "lodash": "4.17.15"
   }
 }
